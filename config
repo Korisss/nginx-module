@@ -1,0 +1,13 @@
+ngx_addon_name=nginx_module
+
+MODULE_SOURCES=" \
+				$ngx_addon_dir/src/nginx_module.c	\
+				"
+
+MODULE_HEADERS=" \
+				$ngx_addon_dir/src/nginx_module.h	\
+				"
+
+HTTP_MODULES="$HTTP_MODULES $ngx_addon_name"
+NGX_ADDON_SRCS="$NGX_ADDON_SRCS $MODULE_SOURCES"
+NGX_ADDON_DEPS="$NGX_ADDON_SRCS $MODULE_HEADERS"
